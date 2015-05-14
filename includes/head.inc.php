@@ -32,7 +32,7 @@
 		<link rel="stylesheet" href="/styles/ie.css" type="text/css" media="screen,projection" charset="utf-8">
 	<![endif]-->
 
-	<?php echo $scripts ?>
+	<?php echo @$scripts ?>
 
 </head>
 

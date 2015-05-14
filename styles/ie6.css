@@ -1,0 +1,132 @@
+/* @group Has Layout */
+
+.speaker-list ul li a:link,
+.speaker-list ul li a:visited,
+.speaker-list ul li a:hover,
+.speaker-list ul li a:active,
+.speaker-list ul li a:focus,
+.navigation,
+.speaker ul.social-networks,
+.highlight,
+.speaker-bio,
+.speaker-talk,
+.button:link,
+.button:visited,
+.button:hover,
+.button:focus,
+.button:active {
+	zoom:1;
+}
+
+body.schedule .speaker-context {
+	zoom: 1;
+	padding-top: 450px;
+}
+
+/* @end */
+
+/* @group background image fixes */
+
+/* transparent png fix */
+img.speaker-badge,
+.location ul.map-key img,
+body.schedule .page-schedule span,
+body.home .page-home span,
+body.speakers .page-speakers span,
+body.workshops .page-workshops span,
+body.location .page-location span,
+body.sponsorship .page-sponsorship span,
+body.podcast .page-podcast span,
+#onsalebutton,
+.get-updates img,
+.workshops .soldout   {
+	behavior: url(/styles/iepngfix.htc);
+}
+
+/* removes glow */
+.content {
+	background-image: none;
+}
+
+/* fixes broken heart bug */
+.schedule .highlight .heart {
+	position:static;
+}
+
+/* @end */
+
+/* @group widths */
+
+/* stops block dropping down due to IE miscalculating 
+.schedule .highlight {
+	width:18%;
+}
+
+body.schedule .highlight {
+	width:17%;
+}*/
+
+.workshops-teaser .highlight {
+	width: 23%;
+}
+
+.speaker-list .highlight .call-to-action {
+	margin-left:1em;
+}
+
+/* @end */
+
+/* @group navigation */
+
+
+body.schedule .page-schedule span,
+body.home .page-home span,
+body.speakers .page-speakers span,
+body.workshops .page-workshops span,
+body.location .page-location span,
+body.sponsorship .page-sponsorship span,
+body.podcast .page-podcast span   {
+	padding-top: 4px;
+	padding-bottom: 0;
+}
+
+body.home .page-home a:link,
+body.home .page-home a:visited,
+body.home .page-home a:hover,
+body.home .page-home a:focus,
+body.home .page-home a:active,
+body.schedule .page-schedule a:link,
+body.schedule .page-schedule a:visited,
+body.schedule .page-schedule a:hover,
+body.schedule .page-schedule a:focus,
+body.schedule .page-schedule a:active,
+body.speakers .page-speakers a:link,
+body.speakers .page-speakers a:visited,
+body.speakers .page-speakers a:hover,
+body.speakers .page-speakers a:focus,
+body.speakers .page-speakers a:active,
+body.workshops .page-workshops a:link,
+body.workshops .page-workshops a:visited,
+body.workshops .page-workshops a:hover,
+body.workshops .page-workshops a:focus,
+body.workshops .page-workshops a:active,
+body.location .page-location a:link,
+body.location .page-location a:visited,
+body.location .page-location a:hover,
+body.location .page-location a:focus,
+body.location .page-location a:active,
+body.sponsorship .page-sponsorship a:link,
+body.sponsorship .page-sponsorship a:visited,
+body.sponsorship .page-sponsorship a:hover,
+body.sponsorship .page-sponsorship a:focus,
+body.sponsorship .page-sponsorship a:active,
+body.podcast .page-podcast a:link,
+body.podcast .page-podcast a:visited,
+body.podcast .page-podcast a:hover,
+body.podcast .page-podcast a:focus,
+body.podcast .page-podcast a:active   {
+	margin-top: 0;
+	behavior: url(/styles/iepngfix.htc);
+}
+
+/* @end */

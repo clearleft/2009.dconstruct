@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5</title>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow">
+<meta name="controlVis" content="visible">
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/slides.css" media="projection" id="slideProj">
+<link rel="stylesheet" href="ui/outline.css" media="screen" id="outlineStyle">
+<link rel="stylesheet" href="ui/print.css" media="print" id="slidePrint">
+<link rel="stylesheet" href="ui/opera.css" media="projection" id="operaFix">
+<script src="ui/slides.js"></script>
+<style>
+table,th,td {
+	border: 1px solid #bca;
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>HTML5</h1>
+<h2 class="vcard">by <a class="fn url" href="http://clearleft.com/is/jeremykeith" rel="external">Jeremy Keith</a></h2>
+</div>
+</div>
+
+<ol class="xoxo presentation">
+
+<li class="slide">
+<h1>Structure</h1>
+<div class="handout"></div>
+</li>
+
+<li class="slide">
+<h1>Sectioning content</h1>
+<blockquote><p><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#sectioning-content">Sectioning content</a> is content that defines the scope of headings and footers.</p></blockquote>
+<ul>
+<li><code>article</code></li>
+<li><code>aside</code></li>
+<li><code>nav</code></li>
+<li><code>section</code></li>
+</ul>
+<blockquote><p>Each sectioning content element potentially has a heading and an outline.</p></blockquote>
+</li>
+
+<li class="slide">
+<h1>Implicit sections</h1>
+<table>
+<thead>
+<tr><th>Markup</th><th>Outline</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><pre><code><strong>&lt;h1&gt;Foo&lt;/h1&gt;</strong>
+&lt;p&gt;Lorem ipsum foolor&lt;/p&gt;
+<strong>&lt;h2&gt;Bar&lt;/h2&gt;</strong>
+&lt;p&gt;Lorem ipsum barlor&lt;/p&gt;
+<strong>&lt;h3&gt;Baz&lt;/h3&gt;</strong>
+&lt;p&gt;Lorem ipsum bazlor&lt;/p&gt;
+<strong>&lt;h2&gt;Qux&lt;/h2&gt;</strong>
+&lt;p&gt;Lorem ipsum quxlor&lt;/p&gt;
+&lt;small&gt;foobar&lt;/small&gt;</code></pre></td>
+<td class="incremental"><pre><strong>Foo</strong>
+  <strong>Bar</strong>
+    <strong>Baz</strong>
+  <strong>Qux</strong>
+  <i>foobar</i>
+</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+
+<li class="slide">
+<h1>Explicit sections</h1>
+<table>
+<thead>
+<tr><th>Markup</th><th>Outline</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><pre><code><strong>&lt;h1&gt;Foo&lt;/h1&gt;</strong>
+&lt;p&gt;Lorem ipsum foolor&lt;/p&gt;
+<strong>&lt;section&gt;</strong>
+<strong>&lt;h1&gt;Bar&lt;/h1&gt;</strong>
+&lt;p&gt;Lorem ipsum barlor&lt;/p&gt;
+<strong>&lt;h2&gt;Baz&lt;/h2&gt;</strong>
+&lt;p&gt;Lorem ipsum bazlor&lt;/p&gt;
+<strong>&lt;h1&gt;Qux&lt;/h1&gt;</strong>
+&lt;p&gt;Lorem ipsum quxlor&lt;/p&gt;
+<strong>&lt;/section&gt;</strong>
+&lt;small&gt;foobar&lt;/small&gt;</code></pre></td>
+<td class="incremental"><pre><strong>Foo</strong>
+  <strong>Bar</strong>
+    <strong>Baz</strong>
+  <strong>Qux</strong>
+<i>foobar</i>
+</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+
+<li class="slide">
+<h1>Creating an outline</h1>
+<h2><code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-hgroup-element">hgroup</a></code></h2>
+<blockquote><p>The point of <code>hgroup</code> is to <del>mask an <code>h2</code> element (that acts as a secondary title)</del> from the outline algorithm.</p></blockquote>
+<p>The point of <code>hgroup</code> is to mask <ins>all but the highest-ranking heading element within</ins> from the outline algorithm.</p>
+</li>
+
+<li class="slide">
+<h1>Sectioning roots</h1>
+<ul>
+<li>
+<code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-blockquote-element">blockquote</a></code>
+</li>
+<li>
+<code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-body-element-0">body</a></code>
+</li>
+<li>
+<code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-figure-element">figure</a></code>
+</li>
+<li>
+<code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>
+</li>
+</ul>
+<blockquote><p>These elements can have their own outlines, but the sections and headings inside these elements do not contribute to the outlines of their ancestors.</p></blockquote>
+</li>
+
+<li class="slide">
+<h1>Sectioning roots</h1>
+<table>
+<thead>
+<tr><th>Markup</th><th>Outline</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><pre><code><strong>&lt;h1&gt;Foo&lt;/h1&gt;</strong>
+&lt;p&gt;Lorem ipsum foolor&lt;/p&gt;
+<strong>&lt;h2&gt;Bar&lt;/h2&gt;</strong>
+&lt;p&gt;Lorem ipsum barlor&lt;/p&gt;
+<strong>&lt;blockquote&gt;</strong>
+&lt;h3&gt;Baz&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum bazlor&lt;/p&gt;
+<strong>&lt;/blockquote&gt;</strong>
+<strong>&lt;h2&gt;Qux&lt;/h2&gt;</strong>
+&lt;p&gt;Lorem ipsum quxlor&lt;/p&gt;
+&lt;small&gt;foobar&lt;/small&gt;</code></pre></td>
+<td class="incremental"><pre><strong>Foo</strong>
+  <strong>Bar</strong>
+  <strong>Qux</strong>
+</pre></td>
+</tr>
+</tbody>
+</table>
+</li>
+
+<li class="slide">
+<h1>Styles</h1>
+<pre><code>&lt;style&gt;
+h1 { color: green; }
+&lt;/style&gt;
+&lt;h1&gt;What colour am I?&lt;/h1&gt;
+&lt;section&gt;
+&lt;style&gt;
+h1 { color: red; }
+&lt;/style&gt;
+&lt;h1&gt;What colour am I?&lt;/h1&gt;
+&lt;/section&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1>Scoped styles</h1>
+<pre><code>&lt;style&gt;
+h1 { color: green; }
+&lt;/style&gt;
+&lt;h1&gt;What colour am I?&lt;/h1&gt;
+&lt;section&gt;
+&lt;style <strong>scoped</strong>&gt;
+h1 { color: red; }
+&lt;/style&gt;
+&lt;h1&gt;What colour am I?&lt;/h1&gt;
+&lt;/section&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1>Global styles</h1>
+<pre><code>article, aside, details,
+figure, footer, header,
+hgroup, nav, section {
+	<strong>display: block;</strong>
+}</code></pre>
+</li>
+
+<li class="slide">
+<h1>Internet Explorer</h1>
+<ul class="incremental">
+<li><pre><code>document.createElement('article');
+document.createElement('aside');
+document.createElement('details');
+&hellip;</code></pre></li>
+<li><pre><code>&lt;!--[if IE]&gt;
+&lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;
+&lt;/script&gt;
+&lt;![endif]--&gt;</code></pre></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>New elements</h1>
+<img src="images/layout01.gif" alt="Document with structural elements and no divs">
+</li>
+
+<li class="slide">
+<h1>New and old elements</h1>
+<img src="images/layout02.gif" alt="Document with structural elements and divs">
+</li>
+
+<li class="slide">
+<h1><abbr title="Accessibile Rich Internet Applications">ARIA</abbr> roles</h1>
+<img src="images/layout03.gif" alt="Document with divs and roles">
+</li>
+
+<li class="slide">
+<h1>Classes</h1>
+<img src="images/layout04.gif" alt="Document with divs, classes and roles">
+</li>
+
+<li class="slide">
+<h1>Options</h1>
+<ul class="incremental">
+<li>Doctype + ARIA <code>role</code>s</li>
+<li>Doctype + <code>class</code> names + ARIA <code>role</code>s</li>
+<li>Doctype + new elements + ARIA <code>role</code>s</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Resources</h1>
+<ul>
+<li><a rel="external" href="http://validator.nu/">validator.nu</a></li>
+<li><a rel="external" href="http://gsnedders.html5.org/outliner/">gsnedders.html5.org/outliner</a></li>
+<li><a rel="external" href="http://html5doctor.com/">html5doctor.com</a></li>
+<li><a rel="external" href="http://diveintohtml5.org/">diveintohtml5.org</a></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Get involved</h1>
+<h2>WHATWG</h2>
+<ul>
+<li>Spec: <a rel="external" href="http://whatwg.org/html5">whatwg.org/html5</a></li>
+<li>Mailing lists: <a rel="external" href="http://whatwg.org/mailing-list">whatwg.org/mailing-list</a></li>
+<li>IRC channel: <a rel="external" href="irc://irc.freenode.org/whatwg">irc://irc.freenode.org/whatwg</a></li>
+</ul>
+</li>
+
+</ol>
+
+</body>
+</html>

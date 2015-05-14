@@ -1,0 +1,70 @@
+.speaker-list ul li a:link,
+.speaker-list ul li a:visited,
+.speaker-list ul li a:hover,
+.speaker-list ul li a:active,
+.speaker-list ul li a:focus,
+.navigation,
+.speaker ul.social-networks,
+.highlight,
+.speaker-bio,
+.speaker-talk,
+.button:link,
+.button:visited,
+.button:hover,
+.button:focus,
+.button:active,
+.body.schedule .section .speaker,
+body.schedule .speaker-context,
+.speaker-badge
+ {
+	zoom:1;
+}
+
+body.home .page-home span,
+body.schedule .page-schedule span,
+body.speakers .page-speakers span,
+body.workshops .page-workshops span,
+body.location .page-location span,
+body.sponsorship .page-sponsorship span,
+body.podcast .page-podcast span   {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	padding-top:30px;
+}
+
+body.schedule .page-schedule a:link,
+body.schedule .page-schedule a:visited,
+body.schedule .page-schedule a:hover,
+body.schedule .page-schedule a:focus,
+body.schedule .page-schedule a:active,
+body.home .page-home a:link,
+body.home .page-home a:visited,
+body.home .page-home a:hover,
+body.home .page-home a:focus,
+body.home .page-home a:active,
+body.workshops .page-workshops a:link,
+body.workshops .page-workshops a:visited,
+body.workshops .page-workshops a:hover,
+body.workshops .page-workshops a:focus,
+body.workshops .page-workshops a:active,
+body.location .page-location a:link,
+body.location .page-location a:visited,
+body.location .page-location a:hover,
+body.location .page-location a:focus,
+body.location .page-location a:active,
+body.sponsorship .page-sponsorship a:link,
+body.sponsorship .page-sponsorship a:visited,
+body.sponsorship .page-sponsorship a:hover,
+body.sponsorship .page-sponsorship a:focus,
+body.sponsorship .page-sponsorship a:active,
+body.podcast .page-podcast a:link,
+body.podcast .page-podcast a:visited,
+body.podcast .page-podcast a:hover,
+body.podcast .page-podcast a:focus,
+body.podcast .page-podcast a:active   {
+	padding-top:30px;
+}
+
+/*body.schedule .highlight {
+	width:17%;
+}*/

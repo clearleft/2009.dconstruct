@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5</title>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow">
+<meta name="controlVis" content="visible">
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/slides.css" media="projection" id="slideProj">
+<link rel="stylesheet" href="ui/outline.css" media="screen" id="outlineStyle">
+<link rel="stylesheet" href="ui/print.css" media="print" id="slidePrint">
+<link rel="stylesheet" href="ui/opera.css" media="projection" id="operaFix">
+<script src="ui/slides.js"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>HTML5</h1>
+<h2 class="vcard">by <a class="fn url" href="http://clearleft.com/is/jeremykeith" rel="external">Jeremy Keith</a></h2>
+</div>
+</div>
+
+<ol class="xoxo presentation">
+
+<li class="slide">
+<h1>The Specification</h1>
+<div class="handout"></div>
+</li>
+
+<li class="slide">
+<h1>Design principles</h1>
+<ul>
+<li><a rel="external" href="http://www.w3.org/TR/html-design-principles/#priority-of-constituencies">&hellip;users over authors over implementors over specifiers over theoretical purity</a></li>
+<li><a rel="external" href="http://www.w3.org/TR/html-design-principles/#pave-the-cowpaths">Pave the cowpaths</a></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Doctype</h1>
+<ul class="incremental">
+<li><a rel="external" href="http://www.w3.org/TR/html401/">HTML 4.01</a>:
+<pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+   &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</code></pre></li>
+<li><a rel="external" href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a>:
+<pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+   &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</code></pre></li>
+<li><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/">HTML 5</a>: <pre><code>&lt;!DOCTYPE html&gt;</code></pre></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Character encoding</h1>
+<ul class="incremental">
+<li><a rel="external" href="http://www.w3.org/TR/html401/">HTML 4.01</a>:
+<pre><code>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</code></pre></li>
+<li><a rel="external" href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a>:
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;</code></pre></li>
+<li><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/">HTML 5</a>: <pre><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></pre></li>
+</ul>
+</li>
+
+
+<li class="slide">
+<h1>Serialisation</h1>
+<ul>
+<li>
+<h2>HTML5</h2>
+<p><em>must</em> be served using the <code>text/html</code> MIME type.</p>
+</li>
+<li>
+<h2>XHTML5</h2>
+<p><em>must</em> be served using an XML MIME type, such as <code>application/xhtml+xml</code> or <code>application/xml</code>.</p>
+</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Syntax</h1>
+<ul class="incremental">
+<li>
+<pre><code>&lt;li class=&quot;foo&quot;&gt;Hello world&lt;/li&gt;
+&lt;img src=&quot;foo&quot; alt=&quot;bar&quot; /&gt;</code></pre>
+</li>
+<li>
+<pre><code>&lt;li class=&quot;foo&quot;&gt;Hello world
+&lt;img src=&quot;foo&quot; alt=&quot;bar&quot;&gt;</code></pre>
+</li>
+<li>
+<pre><code>&lt;LI CLASS=&quot;foo&quot;&gt;Hello world&lt;/LI&gt;
+&lt;IMG SRC=&quot;foo&quot; ALT=&quot;bar&quot;&gt;</code></pre>
+</li>
+<li>
+<pre><code>&lt;li class=foo&gt;Hello world&lt;/li&gt;
+&lt;img src=foo alt=bar&gt;</code></pre>
+</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Error handling</h1>
+<blockquote cite="http://www.whatwg.org/specs/web-apps/current-work/multipage/syntax.html#parsing">
+<p>This specification defines the parsing rules for HTML documents, whether they are syntactically correct or not.</p>
+</blockquote>
+&mdash;<a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/syntax.html#parsing">Parsing HTML documents</a>
+</li>
+
+<li class="slide">
+<h1><abbr title="Application Programming Interface">API</abbr>s</h1>
+<ul>
+<li><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-0.html#document.write()"><code>document.write</code></a></li>
+<li><a rel="external"  href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#the-history-interface"><code>window.history</code></a></li>
+<li><a rel="external"  href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-0.html#innerhtml"><code>innerHTML</code></a></li>
+<li><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable"><code>contenteditable</code></a></li>
+<li><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dnd">Drag and drop</a></li>
+<li><a rel="external" href="http://www.w3.org/TR/offline-webapps/">Offline storage</a></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Audio</h1>
+<pre><code>&lt;<a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#audio">audio</a> <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#attr-media-src">src</a>=&quot;song.mp3&quot; <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#attr-media-controls">controls</a> <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#attr-media-autobuffer">autobuffer</a>&gt;
+&lt;-- <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-0.html#fallback-content">fallback content</a> --&gt;
+&lt;/audio&gt;</code></pre>
+<a rel="external" href="../examples/audio/index.html">example</a>
+</li>
+
+<li class="slide">
+<h1>Video</h1>
+<pre><code>&lt;<a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#video">video</a> <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#attr-media-controls">controls</a> <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#attr-canvas-width">width</a>=&quot;200&quot; <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#attr-canvas-height">height</a>=&quot;200&quot;&gt;
+&lt;<a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#the-source-element">source</a> <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#attr-source-type">type</a>=&quot;video/ogg&quot; <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#attr-source-src">src</a>=&quot;movie.ogg&quot;&gt;
+&lt;<a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#the-source-element">source</a> <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#attr-source-type">type</a>=&quot;video/mp4&quot; <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html#attr-source-src">src</a>=&quot;movie.mp4&quot;&gt;
+&lt;-- <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-0.html#fallback-content">fallback content</a> --&gt;
+&lt;/video&gt;</code></pre>
+<a rel="external" href="../examples/video/index.html">example</a>
+</li>
+
+<li class="slide">
+<h1>Canvas</h1>
+<pre><code>&lt;<a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#the-canvas-element">canvas</a> <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#attr-canvas-width">width</a>=&quot;200&quot; <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#attr-canvas-height">height</a>=&quot;200&quot;&gt;
+&lt;-- <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-0.html#fallback-content">fallback content</a> --&gt;
+&lt;/canvas&gt;</code></pre>
+<a rel="external" href="http://balldroppings.com/js/">example</a>
+</li>
+
+<li class="slide">
+<h1>Forms</h1>
+<ul class="incremental">
+<li><code>&lt;<a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-input-element">input</a> <a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-type">type</a>=&quot;...&quot;&gt;</code></li>
+<li><code>search</code>
+ <a rel="external" href="../examples/forms/search.html">example</a></li>
+<li><code>tel email url</code>
+ <a rel="external" href="../examples/forms/contact.html">example</a></li>
+<li><code>datetime date month week time</code>
+ <a rel="external" href="../examples/forms/time.html">example</a></li>
+<li><code>number range</code>
+ <a rel="external" href="../examples/forms/numbers.html">example</a></li>
+<li><code>color</code></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Next...</h1>
+<p><a href="semantics.html">Semantics</a></p>
+</li>
+
+</ol>
+
+</body>
+</html>

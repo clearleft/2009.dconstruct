@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Audio: Long Gone</title>
+</head>
+<body>
+<h1>Long Gone by Salter Cane</h1>
+<audio id="audio" src="LongGone.mp3">
+<!-- Flash fallback -->
+<object type="application/x-shockwave-flash" data="player.swf?soundFile=LongGone.mp3" width="290" height="24">
+<param name="movie" value="player.swf?soundFile=LongGone.mp3">
+<!-- Link fallback -->
+<a href="LongGone.mp3">Long Gone</a>
+</object>
+</audio>
+<div>
+<button onclick="document.getElementById('audio').play()">Play</button>
+<button onclick="document.getElementById('audio').pause()">Pause</button>
+<button onclick="document.getElementById('audio').volume += 0.1">Volume Up</button>
+<button onclick="document.getElementById('audio').volume -= 0.1">Volume Down</button>
+</div>
+</body>
+</html>

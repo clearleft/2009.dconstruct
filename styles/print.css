@@ -1,0 +1,43 @@
+div.navigation,
+div.footer,
+object {
+	display: none;
+}
+
+body {
+	margin: 2.5%;
+	font-family: Baskerville, Georgia, serif;
+	font-size: 12pt;
+}
+
+a {
+	color: gray;
+	text-decoration: underline;
+}
+
+.header {
+	clear: both;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.header h1 {
+	float: left;
+}
+.header h2,
+.header h3 {
+	margin: 0;
+	text-align: right;
+}
+.header h2 {
+	color: #666666;
+	font-size: 1.75em;
+}
+
+.header h3 {
+	color: gray;
+	text-transform: uppercase;
+	font-size: 0.937em;
+	font-weight: lighter;
+}
+.content {
+	clear: both;
+}

@@ -1,0 +1,2006 @@
+/*
+Harmonise v1.22
+Resets styles then adds basic typographical styling
+By Richard Rutter, clearleft.com
+*/
+
+/* @group General Styles */
+
+/* @group Reset */
+
+/* Based on http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+ul {
+	list-style: none;
+}
+
+.section ul li {
+	background-image: url(/images/bullet.gif);
+	background-repeat: no-repeat;
+	padding-left: 1em;
+	background-position:0 0.5em;
+	line-height:1.5em;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+/* tables may still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* @end Reset */
+
+body {
+	padding: 0;
+	margin: 0 auto;
+	background-color: #2C3135;
+	background-image: url(/images/bg-tile.png);
+	background-repeat: repeat;
+	color:#999999;
+	font-family: helvetica, arial, sans-serif;
+    font-size:100%;
+    line-height:1.2;
+    min-width: 900px;
+}
+
+a:link, 
+button.link span {
+	color: #26ADFF;
+	border-bottom: 1px solid;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #2097E0;
+	border-bottom: 1px solid;
+	text-decoration: none;
+}
+
+a:hover, 
+a:focus,
+button.link:hover,
+button.link:focus span {
+	color: #8CB715; 
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+a:active, 
+button.link:active span {
+	color: #8CB715; 
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+/* @group Font sizes */
+
+/* basic font sizes */
+p, ul, ol, dl, table, address, blockquote, fieldset, pre, form div {
+	font-size:1em;
+}
+
+/* deal with likely (but certainly not all) inherited shrinkage */
+
+ul p, ol p, table p, dl p, ul ul, ol ol, ul ol, ol ul, address p, li blockquote, blockquote p, form div div, form div p, fieldset div, table form div {
+	font-size: 1em;
+}
+
+
+h1 {
+	font-size: 2.625em;
+	line-height: 1.25em;
+	text-transform: uppercase;
+}
+
+h2 { 
+	font-size: 2.625em;
+	text-transform: uppercase;
+}
+
+h3 { 
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+h5,
+h6 {
+	font-size: 0.875em;
+}
+
+/* @end Font Sizes */
+
+/* @group Margins */
+
+p, ul, ol, dl, address, table, pre, fieldset {
+	margin-bottom: 1.385em;
+}
+
+form {
+	margin-bottom: 1.125em;
+}
+
+h1 {
+	margin-top:1.125em;
+	margin-bottom: 0.75em;
+	color: #FFFFFF;
+	line-height: 1em;
+}
+
+h2 {
+	line-height: 1em;
+	margin:0.5em 0;
+	color: #EFEFEF;
+}
+
+h3 {
+	margin-top:1.6875em;
+	margin-bottom: 0.5625em;
+	color: #666666;
+	line-height: 1em;
+}
+
+h3 a:link,
+h3 a:visited,
+h3 a:hover,
+h3 a:focus,
+h3 a:active {
+	border-bottom: none;
+	color: #666666;
+}
+
+h4 {
+	margin-top:1.286em;
+	margin-bottom: 0.643em;
+	color: #FFFFFF;
+	line-height: 1em;
+}
+
+ul ul, ol ol, ol ul, ul ol {
+	margin-bottom: 0;
+}
+
+/* @end Margins */
+
+/* @group Lists */
+
+.prose ul, ul.xoxo, ul.xoxo ul {
+/* unordered lists more often DON'T require bullets except in extended bits of writing. Where bullets are required apply the .prose class to a container, or apply directly with .xoxo */
+	list-style-type: disc;
+	margin-left: 1.385em; /* 18px */
+}
+
+ol {	/* ordered lists usually DO require (numbered) bullets */
+	list-style-type: decimal;
+	margin-left: 2.077em; /* 27px */
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 1.385em; /* 18px */
+}
+
+/* @end Lists */
+
+/* @group Tables */
+
+caption {
+	font-weight: bold;
+	padding-bottom: 0.643em; /* 9px */
+	font-size:1.077em; /* 14px */
+}
+
+thead th {
+	border-top: 1px solid #666;
+	border-bottom: 3px solid #666;
+	padding-top: 0;
+	padding-bottom: 0.692em; /* 9px */
+}
+
+tbody {
+	border-top: none;
+}
+
+td,
+th {
+	border-bottom: 1px solid #494C50;
+	padding: 1em 0;
+	text-align: left;
+	padding: 0.385em 0.692em 0.308em 0.692em; /* 5px 9px 4px 9px */
+}
+
+th {
+	color: #666666;
+}
+
+td {
+	color: #CCCCCC;
+}
+
+table p {
+	font-size: 0.9em;
+}
+
+/* @end Tables */
+
+/* @group Blockquotes */
+
+blockquote {
+	font-style: italic;
+	margin:0  1.385em  1.385em 1.385em; /* 18px */
+	line-height: 1.5;
+	font-size: 1.2em;
+	font-style: normal;
+	text-indent: 0;
+}
+
+blockquote p {
+	border-bottom: 1px solid #494C50;
+	display: inline;
+}
+
+p+p+blockquote {
+	margin-top: 1.385em;
+}
+
+blockquote cite, blockquote em {
+	font-style: normal;
+}
+
+/* @end Blockquotes */
+
+/* @group Forms */
+
+/* @group Containers */
+
+form .container {
+	margin-bottom: 1.385em; /* 18px */
+}
+
+/* @group Fieldsets */
+
+fieldset {
+	border: 1px solid #ccc;
+	padding: 0 1.385em 0.692em 1.385em; /* 9px 18px 0 18px */
+}
+
+legend {
+	font-weight: bold;
+}
+
+form fieldset .container {
+	margin-top: 1.385em; /* 18px */
+	margin-bottom:0;
+	position: relative;
+	top: -0.692em; /* fudge to deal with IE fieldset margin/padding */
+}
+
+/* @end Fieldsets */
+
+/* @end Containers */
+
+/* @group Labels */
+
+label {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.meta-label {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.multi-container label, 
+.radio-container label, 
+.checkbox-container label {
+	font-weight: normal;
+}
+
+.radio-container label, 
+.checkbox-container label {
+	display: block;
+}
+
+.compact label {
+	display: inline;
+}
+
+/* @end Labels */
+
+/* @group Meta */
+
+form .help {
+	display: block;
+	color: #777;
+	font-style: normal;
+	margin-top: 0.1em;
+	font-size: 0.846em; /* 11px */
+}
+
+/* @end Meta */
+
+/* @group Form controls */
+
+input, textarea, select, button {
+	font-family: inherit;
+	font-size: 1em;
+}
+
+textarea, input[type='text'], 
+input[type='password'], select {
+	border-width: 1px;
+	border-style: solid;
+	border-top-color: #999;
+	border-left-color: #999;
+	border-bottom-color: #ccc;
+	border-right-color: #ccc;
+	padding: 0 1px 1px 1px;
+	display: block;
+	margin-top:0.2em;
+}
+
+textarea:focus, input[type='text']:focus, 
+input[type='password']:focus, select:focus {
+	border-color: #888;
+	outline: 2px solid #ffffaa;
+}
+
+input.short {
+	width: 4em;
+}
+
+input.medium, textarea.medium {
+	width: 12em;
+}
+
+input.long, textarea.long {
+	width: 30em;
+}
+
+textarea {
+	width: 90%;
+	display: block;
+}
+
+.button-container input {
+	font-weight: bold;
+}
+
+.button-container input.cancel {
+	font-weight: normal;
+}
+
+button.link {
+	border: 0;
+	padding: 0;
+	background-color: #fff;
+	font-weight: normal;
+	cursor: pointer;
+	width: auto;
+	overflow: visible;
+}
+
+strong {
+	color: #CCCCCC;
+}
+
+/* accessability feature, resize check and radio inputs */
+.radio-container input, 
+.checkbox-container input {
+	width: 1em;
+	height: 1em;
+}
+
+/* @end Form Controls*/
+
+/* @end Forms */
+
+/* @group Other styling */
+
+address {
+	font-style: normal;
+}
+
+pre, code, kbd, tt, samp, tt {
+	font-family: "andale mono", monospace;
+}
+
+ins {
+	text-decoration: underline;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+/* @end Other Styling */
+
+/* @end Genral Styles*/
+
+/* @group Helper Styles */
+
+p.description,
+.highlight p.description,
+.location .conference-location,
+.workshops .workshop-detail p.description {
+	font-size:1.5em;
+	color: #999999;
+	font-weight: lighter;
+	margin-top:1em;
+}
+
+
+.description.vevent {
+	margin-bottom: 0;
+}
+
+.vevent p.description {
+	font-size: 1em;
+	color: inherit;
+	font-weight: inherit;
+	margin-top: 0;
+}
+
+.vevent.highlight p.description {
+	font-size: 0.813em;
+	margin-left: 1.25em;
+}
+
+p.add-to-cal {
+	text-align: right;
+}
+
+img.sponsor-transcripts {
+	margin-bottom: 1em;
+}
+
+/* @group Buttons */
+
+.button:link,
+.button:visited,
+.button:hover,
+.button:focus,
+.button:active {
+	-moz-border-radius-bottomleft:0.5em;
+	-moz-border-radius-bottomright:0.5em;
+	-moz-border-radius-topleft:0.5em;
+	-moz-border-radius-topright:0.5em;
+	background-image:url(/images/button-highlight.gif);
+	background-position:right top;
+	background-repeat:repeat;
+	border:1px solid #515357;
+	border-width:1px;
+	cursor:pointer;
+	display:block;
+	float:left;
+	padding:0;
+	text-transform:uppercase;
+}
+
+.button span {
+	background-position:left 0;
+	background-repeat: no-repeat;
+	line-height:50px;
+	border: none;
+	display: block;
+	float: left;
+	padding:0 1.9em;
+	font-weight: bold;
+}
+
+/* @group Call To Action Buttons */
+
+.call-to-action:link,
+.call-to-action:visited,
+.call-to-action:hover,
+.call-to-action:focus,
+.call-to-action:active,
+button {
+	background-image:url(/images/button_green_right.jpg);
+	background-repeat: no-repeat;
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+	color: #333333;
+}
+
+button {
+	padding:0.3em 0.5em;
+	-moz-border-radius-bottomleft:0.5em;
+	-moz-border-radius-bottomright:0.5em;
+	-moz-border-radius-topleft:0.5em;
+	-moz-border-radius-topright:0.5em;
+}
+
+.call-to-action:link span,
+.call-to-action:visited span,
+.call-to-action:active span,
+.call-to-action:hover span,
+.call-to-action:focus span {
+	background-image:url(/images/button_green_left.jpg);
+	color: #FFFFFF;
+}
+
+.call-to-action:hover span,
+.call-to-action:focus span {
+	color: #333333;
+}
+
+/* @end Call To Action Buttons */
+
+/* @group Podcast Option Buttons */
+
+.speaker ul.social-networks {
+	padding-left: 0;
+	overflow: hidden;
+	margin-bottom: 1.5em;
+}
+
+.speaker ul.podcast-options {
+	float: left;
+	left: 0;
+	margin-left:-33em;
+	position: relative;
+}
+
+.speaker ul.podcast-options li,
+.speaker ul.social-networks li {
+	float: left;
+	background-image: none;
+	margin-top:1em;
+	padding-right: 1em;
+	padding-left: 0;
+	line-height: 50px;
+}
+
+.speaker ul.podcast-options li {
+	clear: left;
+	overflow: hidden;
+	margin-left: 3.5em;
+	margin-bottom: 1em;
+	display: block;
+}
+
+.speaker ul.social-networks li span {
+	line-height:40px;
+	padding-top:8px;
+	padding-bottom:0;
+}
+
+/* @end Podcast Option Buttons */
+
+/* @end Buttons*/
+
+/* @end Helper Styles*/
+
+/* @group Page Structure */
+
+/* @group Header */
+
+.header {
+	background-image: url(/images/navigation_middle.jpg);
+	background-position: center bottom;
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-top: 5px solid #8CB715;
+	position: relative;
+}
+
+.header .section {
+	border: none;
+	margin-top: 1em;
+	margin-bottom:0;
+	overflow: visible;
+}
+
+.header p {
+	margin-bottom:0.2em;
+	font-weight: bold;
+}
+
+.header .section p a{
+	border-bottom: 0;
+	color: #999;
+}
+.header .section p a:hover span,
+.header .section p a:focus span,
+.header .section p a:active span{
+	color: #26ADFF;
+}
+.header img {
+	position: absolute;
+}
+
+.header h1 {
+	margin: 0;
+}
+
+.header h2,
+.header h3 {
+	text-align: right;
+	display: block;
+}
+
+.header h2 {
+	color: #666666;
+	font-size: 1.75em;
+	text-transform: none;
+	margin-bottom: 0.2em;
+	margin-left: 12em;
+	margin-top: 0;
+}
+
+.header h3 {
+	margin-bottom: 1em;
+	color: #999999;
+	text-transform: uppercase;
+	margin-top: 0;
+	font-size: 0.937em;
+	font-weight: lighter;
+}
+.header a.call-to-action:link,
+.header a.call-to-action:visited,
+.header a.call-to-action:hover,
+.header a.call-to-action:active,
+.header a.call-to-action:focus {
+	float: right;
+	margin-top: 1em;
+	font-size: 0.8em;
+	color: white !important;
+	position: relative;
+	top: -10px;
+	background-image:url(/images/button_green_right_w.png);
+}
+
+.header a.call-to-action span {
+	line-height: 35px;
+	color: white !important;
+	background-image:url(/images/button_green_left_w.png) !important;
+}
+
+.header a.call-to-action:hover span,
+.header a.call-to-action:focus span {
+	color: #333 !important;
+}
+
+p.registernow {
+	margin: 0;
+	margin-bottom: 35px;
+}
+
+/* @end Header */
+
+/* @group Navigation */
+
+.navigation {
+	font-size: 1.25em;
+	color: #FFFFFF;
+	background-image: url(/images/navigation_left.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+.navigation ol {
+	margin: auto;
+	background-image: url(/images/navigation_right.jpg);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding:65px 100px 50px 180px;
+}
+
+.navigation ol li {
+	display:block;
+	float:left;
+	font-size:0.9em;
+	text-transform:lowercase;
+	text-align: center;
+	padding: 2px 2% 0 2%;
+	text-shadow: #999 1px 0.1em 3px;
+}
+
+.navigation ol li a:link,
+.navigation ol li a:visited,
+.navigation ol li a:hover,
+.navigation ol li a:focus,
+.navigation ol li a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+	border: none;
+}
+
+.navigation ol li a:hover,
+.navigation ol li a:focus,
+.navigation ol li a:active {
+	color: #333333;
+}
+
+
+/* @group Selected States */
+
+body.schedule .page-schedule a:link,
+body.schedule .page-schedule a:visited,
+body.schedule .page-schedule a:hover,
+body.schedule .page-schedule a:focus,
+body.schedule .page-schedule a:active,
+body.home .page-home a:link,
+body.home .page-home a:visited,
+body.home .page-home a:hover,
+body.home .page-home a:focus,
+body.home .page-home a:active,
+body.workshops .page-workshops a:link,
+body.workshops .page-workshops a:visited,
+body.workshops .page-workshops a:hover,
+body.workshops .page-workshops a:focus,
+body.workshops .page-workshops a:active,
+body.location .page-location a:link,
+body.location .page-location a:visited,
+body.location .page-location a:hover,
+body.location .page-location a:focus,
+body.location .page-location a:active,
+body.sponsorship .page-sponsorship a:link,
+body.sponsorship .page-sponsorship a:visited,
+body.sponsorship .page-sponsorship a:hover,
+body.sponsorship .page-sponsorship a:focus,
+body.sponsorship .page-sponsorship a:active,
+body.podcast .page-podcast a:link,
+body.podcast .page-podcast a:visited,
+body.podcast .page-podcast a:hover,
+body.podcast .page-podcast a:focus,
+body.podcast .page-podcast a:active,
+body.capsule .page-capsule a:link,
+body.capsule .page-capsule a:visited,
+body.capsule .page-capsule a:hover,
+body.capsule .page-capsule a:focus,
+body.capsule .page-capsule a:active     {
+	background-image: url(/images/navigation_selected_right.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	bottom:-4px;
+	line-height: 46px;
+	color:#FFFFFF;
+	padding-top: 70px;
+	padding-bottom: 12px;
+	padding-left: 0.5em;
+	padding-right: 2em;
+}
+
+body.home .page-home span,
+body.schedule .page-schedule span,
+body.workshops .page-workshops span,
+body.location .page-location span,
+body.sponsorship .page-sponsorship span,
+body.podcast .page-podcast span,
+body.capsule .page-capsule span    {
+	background-image:url(/images/navigation_selected_left.png);
+	background-position:left bottom;
+	background-repeat:no-repeat;
+	bottom:-4px;
+	padding-top:70px;
+	padding-bottom:12px;
+	padding-left:27px;
+	padding-right:10px;
+	position: relative;
+	z-index: 100;
+}
+
+
+/* @end Selected States */
+
+/* @end Navigation */
+
+/* @group Sections */
+
+.section {
+	width:80%;
+	margin: 0 auto;
+	clear: both;
+	overflow:hidden;
+	margin-bottom: 4em;
+	max-width: 85em;
+}
+.section.notwide{
+	padding-right: 30%;
+	width: 50%;
+}
+
+.content {
+	background-image: url(/images/glow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-top: 3em;
+	text-align: left;
+	}
+
+/* @end Sections */
+
+/* @group Footer */
+
+/* @group Footer Sponsors */
+
+.sponsors {
+	background-color: #F7F7F7;
+	clear: both;
+	border-top: 4px solid #494D51;
+	padding: 1em 0 1em 0;
+	overflow: hidden;
+}
+.sponsors a:link,
+.sponsors a:visited,
+.sponsors a:hover,
+.sponsors a:focus,
+.sponsors a:active {
+	border: none;
+}
+
+.sponsors img {
+	margin: 1em 2em 1em 0;
+}
+
+.sponsors h3 {
+	color: #666666;
+	text-transform: uppercase;
+	font-size: 0.75em;
+}
+
+.sponsors .associate ul li {
+	width: 22%;
+}
+
+.sponsors .premiere ul li {
+	width: 30%;
+}
+
+.sponsors .media {
+	border-bottom: none;
+	margin-right: 2em;
+}
+
+.sponsors .media ul li.theteam {
+	width: 200px;
+}
+
+.sponsors .media ul li.yourcompany {
+	width: 304px;	
+	margin-top: 20px;
+}
+
+.sponsors-media {
+	margin-right: 2em;
+}
+
+.sponsors img.perch {
+	margin-bottom: 1.3em;
+	position: relative;
+	top: 1px;
+}
+
+.sponsors img.guardian {
+	position: relative;
+	top: 2px;
+}
+
+.sponsors img.splendid {
+	margin-top: 0;	
+	margin-bottom: 2.3em;	
+	position: relative;
+	top:  12px;
+}
+
+.sponsor-tier li.yourcompany a {
+	display: block;
+}
+
+.sponsor-tier li.yourcompany img {
+	margin: 0;
+}
+
+li.yourcompany h3 {
+	margin-bottom: 3.3em;
+}
+
+.sponsor-tier {
+	border-bottom: 4px solid #FFFFFF;
+	width: 70%;
+	margin: auto;
+	float: right;
+	padding-bottom:1em;
+}
+.mixture {
+	border-bottom: none;
+	padding-bottom:0;
+
+}
+.sponsor-tier ul {
+	margin-left: -1em;
+}
+
+.sponsor-tier ul li {
+	background-image: none;
+	float: left;
+	text-align: left;
+}
+
+.mixture ul li h3 {
+	text-align: left;
+}
+
+.sponsor-pack {
+	float: left;
+	width: 28%;
+}
+
+.sponsor-pack p {
+	margin-top: 2em;
+	font-size: 0.9em;
+}
+
+.sponsor-pack a {
+	display: block;
+}
+	
+.sponsor-pack h2 {
+	color: #93C116;
+	text-transform: uppercase;
+	font-size: 1em;
+	margin-top: 1.3em;
+}
+
+/* @end */
+
+/* @group Footer Hosts */
+
+.hosts {
+	background-color: #FFFFFF;
+	color: #333333;
+	overflow: hidden;
+	padding:3em 0;
+	clear: both;
+}
+
+.hosts img {
+	float: left;
+}
+
+.hosts .section h4 {
+	color: #93C116;
+	margin-top:0;
+}
+
+.hosts .section h4,
+.hosts .section p {
+	width: 70%;
+	float: right;
+}
+
+.hosts .section h4 {
+	font-size: 1em;
+}
+
+.hosts p {
+	margin-bottom: 0;
+	font-size:0.8em;
+	line-height:1.7em;
+	margin-bottom:0;
+}
+
+.hosts p.previously{
+	margin-top: 1em;;
+}
+
+/* @end Footer Sponsors */
+
+/* @group Footer Navigation */
+
+.footer {
+	background-color: #8CB715;
+	border-bottom:1px solid #8CB715;
+	color: #FFFFFF;
+	clear: both;
+	overflow: hidden;
+	padding:1em 0 0;
+	font-size:0.8em;
+}
+
+.footer .section {
+	border-top: 0;
+	max-width: none;
+}
+
+.footer .section,
+.hosts .section,
+.sponsors .section {
+	margin-bottom: 0;
+}
+
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+	color: #FFFFFF;
+	border: none;
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+	color: #333333;
+}
+
+.footer .section ul {
+	width: 70%;
+	float: right;
+	display: inline;
+	margin-bottom: 0.5em;
+}
+
+.footer ul li {
+	display: inline;
+	padding: 0 1em 0 0;
+	text-transform: uppercase;
+	background-image: none;
+}
+
+.footer p {
+	float: left;
+	margin: 2px 0 0 0;
+}
+
+/* @end Footer Navigation */
+
+/* @end Footer */
+
+/* @end Page Structure */
+
+/* @group Page Components */
+
+/* @group Highlight */
+
+.highlight-container {
+	overflow: hidden;
+	width: 100%;
+}
+
+.highlight-container .highlight {
+	padding-bottom: 50em;
+	margin-bottom: -50em;
+}
+
+.highlight {
+	background-image: url(/images/bg-tile-dark.png);
+	overflow: hidden;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.highlight p {
+	font-size: 0.813em;
+	color: #999999;
+	margin-left:1em;
+	margin-right: 1em;
+}
+
+.highlight p strong {
+	font-weight: normal;
+	color: #8CB715;
+}
+
+.highlight a:link,
+.highlight a:visited,
+.highlight a:hover,
+.highlight a:focus,
+.highlight a:active {
+	color: #E1E1E1;
+}
+
+.highlight a:hover,
+.highlight a:focus,
+.highlight a:active {
+	color: #8CB715;
+}
+
+.highlight h3 {
+	margin: 0 0.667em;
+}
+
+.highlight h4 {
+	font-size:1.5em;
+	margin: 0 0.667em 0.5em 0.667em;
+	font-weight: lighter;
+	color: #666666;
+}
+
+.highlight h4 a:link,
+.highlight h4 a:visited,
+.highlight h4 a:hover,
+.highlight h4 a:focus,
+.highlight h4 a:active {
+	border-bottom: none;
+	color: #2097E0;
+}
+
+.highlight h4 a:hover,
+.highlight h4 a:focus,
+.highlight h4 a:active {
+	color: #8CB715;
+}
+
+.highlight h5 {
+	margin: 0 1.143em 0.5em 1.143em;
+}
+
+.highlight button {
+	margin: 2em;
+	margin:1.5em 6em;
+}
+
+.highlight img.photo,
+.highlight img.thumbnail {
+	padding: 0;
+	vertical-align:bottom;
+}
+
+.highlight img.photo {
+	width: 50%;
+	margin-right: -5px;
+}
+
+.highlight img.thumbnail {
+	width: 25%;
+}
+
+/* @end Highlight */
+
+/* @group Homepage */
+
+/* @group News */
+
+.news {
+	border-top: 2px solid #494D51;
+	margin-top: 5em;
+}
+
+.section.news {
+	margin-bottom: 0;
+	}
+
+.news .highlight-container {
+	clear: both;
+}
+
+.news h2 {
+	float: left;
+	width: 30%;
+	margin-bottom: 0;
+}
+
+.news p.feed {
+	text-align: right;
+	float: right;
+	width: 70%;
+	margin-top:1.5em;
+	font-size: 0.8em;
+	}
+
+.news p.feed img { vertical-align: text-bottom; }
+
+.news-story blockquote p {
+	border-bottom: none;
+	font-size: 0.8em;
+	display: block;
+	line-height: 1.3em;
+}
+
+
+.news-item {
+	width: 31%;
+	float: left;
+	padding-right:2%;
+	margin-top:2em;
+}
+
+.news-item blockquote {
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+.news-story {
+	float: left;
+	padding-left: 0.8em;
+	margin-top: 0;
+	width: 80%;
+	margin-bottom: 4em;
+}
+
+.news-story h4 {
+	margin-top: 0;
+	text-transform: uppercase;
+	display: inline;
+	line-height:1.5em;
+	color: #CCCCCC;
+}
+
+.news-story p {
+	margin-top: 0.5em;
+	color: #999999;
+}
+
+p.date {
+	width: 2em;
+	float: left;
+	color: #666666;
+	text-align:center;
+	text-transform: uppercase;
+}
+
+p.date strong {
+	display: block;
+	font-size: 2em;
+	line-height: 1.1em;
+	margin-bottom: 0.1em;
+	color: #999999;
+	border-bottom: 1px solid #999999;
+}
+
+/* @end News */
+
+/* @group Speaker List */
+
+.speaker-list {
+	border: none;
+	margin-top: 4em;
+}
+
+.speaker-list .highlight {
+	float: left;
+	margin: 1em 0;
+	width: 54%;
+	max-width: 600px;
+	overflow: hidden;
+}
+
+.speaker-list .highlight .photos {
+	width: 94%;
+	margin: auto;
+}
+
+#onsalebutton {
+	float:left;
+	position: relative;
+	top: 1.4em;
+	left: 15px;
+	z-index: 200;
+	border: none;
+	display: block;
+	margin-left: 0;
+}
+#onsalebutton span {
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+}
+
+.speaker-list p{
+	padding-left: 140px;
+}
+
+.speaker-list .highlight img.thumbnail {
+	width: 25%;
+}
+
+/* .speaker-list .highlight p.description {
+	width:40%;
+	float: right;
+	margin: 1em 1em 1em 0;
+	padding: 0 0 0.3em 0;
+	position: relative;
+} */
+
+.speaker-list ul {
+	float:right;
+	display: inline;
+	margin-top: 0.4em;
+	margin-bottom: 4em;
+	font-size: 1em;
+	width:44%;
+}
+
+.speaker .speaker-list ul {
+	margin-right: 3em;
+}
+
+.speaker-list ul li {
+	background-image: none;
+}
+
+
+.speaker-list ul li a:link,
+.speaker-list ul li a:visited,
+.speaker-list ul li a:hover,
+.speaker-list ul li a:focus,
+.speaker-list ul li a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+	border: none;
+	padding-bottom: 0.08em;
+	border-bottom: 1px solid #666666;
+	display: block;
+}
+
+.speaker-list ul li a:hover,
+.speaker-list ul li a:focus {
+	color: #26AEFF;
+	border-color: #26AEFF;
+}
+
+.speaker-list ul li h2 {
+	margin-top: 0.3em;
+	margin-bottom: 0;
+}
+
+
+/* .speaker-list .highlight .call-to-action {
+	margin-bottom:2em;
+	margin-left:3em;
+	margin-top:3em;
+}*/
+
+.speaker-list .highlight .call-to-action {
+	margin-left:20%;
+}
+
+.speaker-list p.get-updates {
+	color: #999;
+	font-size: 0.9em;
+	margin-left: 160px;
+	background-image: url(/images/bg-tile-darker.png);
+	padding: 1em;
+	vertical-align: middle;
+	margin-bottom: 0.8em;
+}
+
+.speaker-list p.get-updates img {
+	vertical-align: bottom;
+}
+
+.speaker-list form {
+	margin: 1em;
+}
+.speaker-list form input[type='text'],
+.speaker-list form input[type='image'] {
+	padding: 0.25em;
+	display: inline;
+	vertical-align: middle;
+}
+
+/* @end Speaker List */
+
+/* @group Workshops Teaser */
+
+.workshops-teaser {
+	border-top: 2px solid #494D51;
+	margin-top: 5em;
+}
+
+.workshops-teaser .more-information {
+	width: 50%;
+	float: right;
+}
+
+.workshops-teaser .highlight-container {
+	clear: both;
+}
+
+.workshops-teaser .highlight {
+	float:left;
+	margin-left:2%;
+	width:23.4%;
+}
+
+.workshops-teaser .blurb p {
+	float: right;
+	width: 45%;
+}
+
+.workshops-teaser .blurb p.description {
+	float: left;
+	width: 45%;
+}
+
+p.description dfn {
+	font-style: normal;
+}
+
+/* @end Workshops Teaser*/
+
+/* @end Homepage */
+
+/* @end Page Components*/
+
+/* @group Overrides */
+
+.content .section .highlight.first {
+	margin-left: 0;
+}
+
+.coming-soon {
+	text-align: center;
+}
+
+/* @group Workshops */
+
+.workshops {
+	border-top: 2px solid #494D51;
+	border-top: none;
+}
+
+.workshops .soldout {
+	display: block;
+	margin: 1.5em auto 0 auto;
+	width: 128px;
+	height: 128px;
+}
+
+body.workshops .highlight-container {
+	float:right;
+	margin-top:1em;
+	width:45%;
+}
+
+.workshops .highlight {
+	display:inline;
+	float:left;
+	margin-right:1em;
+	width:43%;
+}
+
+.workshop-schedule .highlight.first {
+	clear: left;
+}
+
+body.workshops .highlight a:link,
+body.workshops .highlight a:visited,
+body.workshops .highlight a:hover,
+body.workshops .highlight a:focus,
+body.workshops .highlight a:active {
+	color: #26AEFF;
+	border-bottom: none;
+}
+
+body.workshops .highlight a:hover,
+body.workshops .highlight a:focus,
+body.workshops .highlight a:active {
+	color: #8CB715;
+}
+
+.workshops .blurb {
+	float: left;
+	width: 45%;
+}
+
+.workshop-schedule {
+	clear: left;
+}
+
+.workshops p.description {
+	float: left;
+	color: #8CB715;
+}
+
+.workshops .more-information{
+	clear: left;
+}
+
+/* @group Workshop Detail */
+
+.workshop-detail {
+	border-top:2px solid #494D51;
+	margin-top: 3em;
+}
+
+.workshop-detail .highlight {
+	float: left;
+	margin-bottom: 3em;
+	margin-top: 3em;
+	padding:0 0 1.5em 0;
+	border: 3px solid #363A3D;
+	width:18em;
+}
+
+.workshop-detail .highlight a.call-to-action:visited,
+.workshop-detail .highlight a.call-to-action:link {
+	margin:1.5em 4em 0 4em;
+	width: 10em;
+	display: inline;
+}
+
+.workshop-detail .highlight img.photo {
+	padding: 0;
+	vertical-align:bottom;
+	width: 100%;
+	margin-right: 0;
+}
+
+.workshop-detail .highlight img.thumbnail {
+	padding: 0;
+	vertical-align:bottom;
+	width: 50%;
+}
+
+.workshop-detail .highlight p.description {
+	font-size: 1.2em;
+	text-align: center;
+	float: none;
+	margin-bottom:0;
+}
+
+.workshop-detail ul {
+	float: left;
+	margin-right:3%;
+}
+
+.workshop-detail .agenda {
+	float:left;
+	margin-bottom:3em;
+	margin-left:2%;
+	margin-top:3em;
+	width:58%;
+}
+
+.workshop-detail .agenda p {
+	clear: left;
+}
+
+body.workshops .workshop-detail .highlight-container {
+	float:none;
+	margin:auto;
+	padding:0;
+}
+
+/* @end Workshop Detail */
+
+/* @end Workshops */
+
+/* @group Sponsors */
+
+body.sponsorship .blurb {
+	float: left;
+	width:48%;
+}
+
+body.sponsorship .more-information {
+	float: right;
+	width: 48%;
+}
+
+body.sponsorship img.sponsors-past {
+	margin-left:3%;
+	margin-bottom:1.5em;
+	text-align:center;
+	display: inline;
+}
+
+body.sponsorship img.first {
+	margin-left: 0;
+}
+
+body.sponsorship .highlight {
+	clear: both;
+	padding-bottom: 0;
+}
+
+body.sponsorship .highlight p {
+	font-size: 1em;
+}
+
+/* @end Sponsors */
+
+/* @group Podcast */
+
+body.podcast .blurb {
+	width: 35%;
+	float: left;
+	margin-right: 2em;
+}
+
+body.podcast p.description,
+.sponsorship p.description {
+	color: #666666;
+}
+
+body.podcast h4 {
+	font-size:1.3em;
+	margin-top:1em;
+	color:#CCCCCC;
+}
+body.podcast .hfeed {
+	width: 58%%;
+	float: left;
+	margin-left: 2%;
+	margin-bottom:3em;
+}
+
+
+body.podcast blockquote {
+	font-style: normal;
+	margin: 0;
+	font-size: 1em;
+}
+
+blockquote p {
+	border-bottom: none;
+	display: block;
+}
+
+/* @end Podcast */
+
+/* @group Schedule */
+
+
+.schedule .content {
+	min-height: 600px;
+}
+body.schedule .highlight-container {
+	margin-bottom: 1em;
+}
+
+body.schedule .highlight {
+	float:left;
+	margin-left:2%;
+	display: inline;
+	width:30%;
+}
+
+body.schedule .highlight h4 strong {
+	font-weight: lighter;
+	margin-bottom: 0.5em;
+}
+
+body.schedule .highlight h5 {
+	font-weight: lighter;
+	color: #8CB715;
+	margin-top: 1em;
+	margin-bottom:2.5em;
+}
+
+body.schedule .highlight p {
+	margin-bottom:0;
+	padding-bottom: 0.8em;
+}
+
+body.schedule .highlight .heart {
+	position:relative;
+	top: -0.2em;
+}
+
+
+
+
+
+/* @here */
+
+body.schedule .content {
+	position: relative;
+	margin-top: 0;
+	padding-top: 4em;
+}
+
+body.schedule .section .speaker {
+	padding-left: 500px;
+	overflow: hidden;
+}
+
+body.schedule .speaker-context {
+	width: 470px;
+	overflow: hidden;
+	margin-left: -500px;
+	float: left;
+	display: inline;
+	padding-top: 420px;
+}
+
+.speaker-badge {
+	position: absolute;
+	top: -16px;
+	width: 470px;
+	height: 575px;
+}
+
+.speaker-badge img {
+	display: block;
+	width: 470px;
+	height: 575px;
+	position: relative;
+}
+
+body.schedule .speaker-list ul{
+	width: auto;
+}
+
+body.schedule .speaker-list ul li {
+	font-size: 0.6em;
+	text-align: right;
+	color: #494D51;
+}
+
+body.schedule .speaker-list ul li a:link, body.schedule .speaker-list ul li a:visited, body.schedule .speaker-list ul li a:hover, body.schedule .speaker-list ul li a:active, body.schedule .speaker-list ul li a:focus {
+color: #494D51;
+}
+
+body.schedule .speaker-list ul li a:hover,
+body.schedule .speaker-list ul li a:active,
+body.schedule .speaker-list ul li a:focus {
+color: #26ADFF;
+}
+
+body.schedule .speaker-list ul li.selected a:link,
+body.schedule .speaker-list ul li.selected a:visited,
+body.schedule .speaker-list ul li.selected a:hover,
+body.schedule .speaker-list ul li.selected a:active,
+body.schedule .speaker-list ul li.selected a:focus {
+color: #93C116;
+border-color: #93C116;
+}
+
+
+
+
+
+
+/*
+body.schedule p {
+	clear: left;
+}
+*/
+
+body.schedule .hosts p {
+	clear: none;
+}
+
+body.schedule table {
+	float: right;
+	width: 60%;
+	margin-top: 1em;
+}
+
+body.schedule table th,
+body.schedule table td {
+	padding: 0.8em 0;
+}
+
+body.schedule td.summary {
+	font-size: 1.25em;
+}
+
+body.schedule td.person {
+	width: 8em;
+	text-align: right;
+	font-size: 0.778em;
+}
+
+body.schedule th {
+	font-size: 1.125em;
+	width: 8em;
+}
+
+body.schedule .lead {
+	width: 30%;
+	float: left;
+	clear: left;
+	display: inline;
+}
+
+body.schedule p.meta {
+	text-align: right;
+	margin-top: 0;
+	margin-bottom: 3em;
+}
+
+/* @end Schedule */
+
+/* @group Speaker */
+
+.speaker-bio,
+.speaker-talk {
+
+	position: relative;
+}
+
+.speaker-talk {
+	padding-top: 4em;
+}
+
+body.schedule h2 strong {
+	display: block;
+	color: #8CB715;
+}
+
+.speaker-bio h2:first-line {
+	color: #FFFFFF;
+}
+
+.schedule .speaker-talk h2 strong {
+	color: #EFEFEF;
+}
+
+.speaker-talk h2:first-line {
+	color: #999999;
+}
+
+.speaker-talk p.description {
+	color: #8CB715;
+}
+
+/* @end Speaker */
+
+/* @group Location */
+
+body.location .highlight {
+	padding-top: 1em;
+	margin-top: 1em;
+}
+
+body.location .conference-location {
+	width: 10em;
+	margin: 0 0 5em 1em;
+}
+
+body.location .conference-location .org {
+	color: #999999;
+}
+
+#places-map {
+	width: 45%;
+	height: 500px;
+	float: right;
+	margin-right: 1em;
+	border: 4px solid #666666;
+}
+
+/* @group Map Key */
+
+body.location ul.map-key {
+	float: left;
+	margin: 0;
+	color: #FFFFFF;
+	font-weight: lighter;
+	font-size: 0.8em;
+}
+
+body.location ul.map-key .org {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+body.location ul.map-key .vcard {
+display: block;
+float: left;
+}
+
+body.location ul.map-key img {
+	float: left;
+	clear: left;
+	width: 36px;
+	height: 36px;
+}
+
+body.location ul.map-key li {
+	background-image: none;
+	margin-bottom: 0.8em;
+	clear: both;
+	position: relative;
+}
+
+body.location .content li span {
+	margin-left:40px;
+}
+
+/* @end Map Key */
+
+/* @group Recommendations */
+
+body.location h3 {
+	text-transform: uppercase;
+	color: #999999;
+}
+
+body.location .recommendations {
+	clear: both;
+}
+
+body.location .accomodation,
+body.location .wifi,
+body.location .eating {
+	width: 30%;
+	float: left;
+	padding-left: 3%;
+}
+
+body.location .accomodation .tel {
+	padding-bottom: 1em;
+}
+
+body.location .content span {
+	display: block;
+}
+
+body.location table {
+	width: 100%;
+}
+
+body.location table p {
+	font-style: italic;
+	color: #999999;
+}
+
+body.location td {
+	padding-left:0;
+	padding-right:0;
+}
+
+body.location .rating-context {
+	text-indent: -9999px;
+}
+
+body.location .org {
+	color: #8CB715;
+}
+
+body.location .tel {
+	font-weight: bold;
+}
+
+body.location .content .url {
+	text-align: right;
+}
+
+/* @end Reccommendations */
+
+/* @end Location */
+
+
+
+/* @end Overrides */
+

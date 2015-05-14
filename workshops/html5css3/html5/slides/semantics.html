@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5</title>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow">
+<meta name="controlVis" content="visible">
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/slides.css" media="projection" id="slideProj">
+<link rel="stylesheet" href="ui/outline.css" media="screen" id="outlineStyle">
+<link rel="stylesheet" href="ui/print.css" media="print" id="slidePrint">
+<link rel="stylesheet" href="ui/opera.css" media="projection" id="operaFix">
+<script src="ui/slides.js"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>HTML5</h1>
+<h2 class="vcard">by <a class="fn url" href="http://clearleft.com/is/jeremykeith" rel="external">Jeremy Keith</a></h2>
+</div>
+</div>
+
+<ol class="xoxo presentation">
+
+<li class="slide">
+<h1>Semantics</h1>
+<div class="handout"></div>
+</li>
+
+<li class="slide">
+<h1>Removed</h1>
+<ul class="incremental">
+<li><a rel="external" href="http://www.w3.org/TR/html5-diff/#absent-elements">Presentational elements</a>: <code>font</code>, <code>big</code>, <code>center</code>, <abbr title="et cetera">etc.</abbr></li>
+<li><a rel="external" href="http://www.w3.org/TR/html5-diff/#absent-attributes">Presentational attributes</a>: <code>border</code>, <code>bgcolor</code>, <abbr title="et cetera">etc.</abbr></li>
+<li><code>frame</code>, <code>frameset</code>, <code>noframes</code></li>
+<li><code>acronym</code></li>
+<li><code>axis</code>, <code>summary</code>(?)</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Changed</h1>
+<ul class="incremental">
+<li><code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>
+<q>&hellip;may be wrapped around entire paragraphs, lists, tables, and so forth, even entire sections, so long as there is no interactive content within.</q>
+</li>
+<li><code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-b-element">b</a></code>
+<q>&hellip;a span of text to be stylistically offset from the normal prose without conveying any extra importance.</q>
+</li>
+<li><code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-i-element">i</a></code>
+<q>&hellip;a span of text in an alternate voice or mood, or otherwise offset from the normal prose.</q>
+</li>
+<li><code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-hr-element">hr</a></code>
+<q>&hellip;a paragraph-level thematic break.</q>
+</li>
+<li><code><a rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-small-element">small</a></code>
+<q>&hellip;small print (for side comments and legal print).</q>
+</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Extensibility</h1>
+<blockquote cite="http://www.alistapart.com/articles/semanticsinhtml5/">
+<p>No matter how many elements we bolt on, we will always think of more semantic goodness to add to HTML. And so, having added as many new elements as we like, we still won’t have solved the problem. We don’t need to add specific terms to the vocabulary of HTML, we need to add a mechanism that allows semantic richness to be added to a document as required.</p>
+</blockquote>
+&mdash;<a rel="external" href="http://www.alistapart.com/articles/semanticsinhtml5/">John Allsopp</a>
+</li>
+
+<li class="slide">
+<h1>Extensibility</h1>
+<blockquote cite="http://www.mnot.net/blog/2006/04/07/extensibility">
+<p>&hellip;social co-ordination brings the value in shared data and protocols, not infinite extensibility, which tends to encourage duplication of effort.</p>
+<p>&hellip;making the points of extensibility into scarce, community-managed resources &hellip; is a good thing. It has positive political and social effects; it forces (or at least inclines) people to co-operate, whether they’re a multi-billion dollar behemoth, or a sole engineer who wants his fifteen minutes of fame.
+</blockquote>
+&mdash;<a rel="external" href="http://www.mnot.net/blog/2006/04/07/extensibility">Mark Nottingham</a>
+</li>
+
+<li class="slide">
+<h1>New elements</h1>
+<ul class="incremental">
+<li>
+<code>mark</code>
+<blockquote><p>&hellip;a run of text in one document marked or highlighted for reference purposes, due to its relevance in another context.</p></blockquote>
+</li>
+<li>
+<code>time</code>
+<blockquote><p>This element is intended as a way to encode modern dates and times in a machine-readable way so that user agents can offer to add them to the user's calendar.</p></blockquote>
+<code>&lt;time datetime=&quot;2009-09-02T09:30:00&quot;&gt;September 2nd, 9:30am&lt;/time&gt;</code>
+</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>New elements</h1>
+<ul>
+<li><code>nav</code>, <code>article</code>, <code>section</code>, <code>aside</code></li>
+<li><code>header</code>, <code>hgroup</code>, <code>footer</code></li>
+<li><code>details</code>, <code>figure</code></li>
+</ul>
+<a rel="external" href="../exercises/definitions/definitions.html">exercise</a>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>header</code></h1>
+<blockquote>
+<p>&hellip;a group of introductory or navigational aids.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;header&gt;
+&lt;h1&gt;My awesome site&lt;/h1&gt;
+&lt;p&gt;Welcome to my site. It has lots of cool stuff:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;My lovely horse&lt;/li&gt;
+&lt;li&gt;My interesting rock collection&lt;/li&gt;
+&lt;li&gt;and more&hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/header&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>aside</code></h1>
+<blockquote>
+<p>&hellip;represents a section of a page that consists of content that is tangentially related to the content around it, and which could be considered separate from that content.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;aside&gt;
+&lt;h1&gt;Brighton&lt;/h1&gt;
+&lt;p&gt;Brighton is a town on the south coast of England.&lt;/p&gt;
+&lt;p&gt;It is built on the site of Brighthelmston.&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>hgroup</code></h1>
+<blockquote>
+<p>&hellip;used to group a set of h1–h6 elements when the heading has multiple levels, such as subheadings, alternative titles, or taglines.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;hgroup&gt;
+&lt;h1&gt;DOM Scripting&lt;/h1&gt;
+&lt;h2&gt;Web Design with JavaScript and The Document Object Model&lt;/h2&gt;
+&lt;/hgroup&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>footer</code></h1>
+<blockquote>
+<p>&hellip;typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;footer&gt;
+&lt;p&gt;Copyright 2009 &lt;address&gt;jeremy@adactio.com&lt;/address&gt;&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>figure</code></h1>
+<blockquote>
+<p>&hellip;some flow content, optionally with a caption, that is self-contained and is typically referenced as a single unit from the main flow of the document.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;figure&gt;
+&lt;img src=&quot;horse.jpg&quot; alt=&quot;a horse in a field&quot;&gt;
+&lt;legend&gt;My lovely horse&lt;/legend&gt;
+&lt;/figure&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>nav</code></h1>
+<blockquote>
+<p>&hellip;a section of a page that links to other pages or to parts within the page: a section with navigation links.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;nav&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>section</code></h1>
+<blockquote>
+<p>&hellip;a thematic grouping of content, typically with a heading, possibly with a footer.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;section&gt;
+&lt;header&gt;
+&lt;h1&gt;DOM Scripting&lt;/h1&gt;
+&lt;/header&gt;
+&lt;h2&gt;JavaScript&lt;/h2&gt;
+&lt;p&gt;JavaScript is a programming language.&lt;/p&gt;
+&lt;h2&gt;The DOM&lt;/h2&gt;
+&lt;p&gt;The DOM is an API.&lt;/p&gt;
+&lt;footer&gt;Written by Jeremy Keith&lt;/footer&gt;
+&lt;/section&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>article</code></h1>
+<blockquote>
+<p>&hellip;a section of a page that consists of a composition that forms an independent part of a document, page, or site.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;article&gt;
+&lt;header&gt;
+&lt;h1&gt;DOM Scripting&lt;/h1&gt;
+&lt;/header&gt;
+&lt;h2&gt;JavaScript&lt;/h2&gt;
+&lt;p&gt;JavaScript is a programming language.&lt;/p&gt;
+&lt;h2&gt;The DOM&lt;/h2&gt;
+&lt;p&gt;The DOM is an API.&lt;/p&gt;
+&lt;footer&gt;Written by Jeremy Keith&lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1 class="incremental"><code>details</code></h1>
+<blockquote>
+<p>&hellip;additional information or controls which the user can obtain on demand.</p>
+</blockquote>
+<pre class="incremental"><code>&lt;details&gt;
+&lt;legend&gt;Log in&lt;/legend&gt;
+&lt;form method=&quot;post&quot; action=&quot;login&quot;&gt;
+&lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;username&quot;&gt;
+&lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+&lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;password&quot;&gt;
+&lt;/form&gt;
+&lt;/details&gt;</code></pre>
+</li>
+
+<li class="slide">
+<h1>Next</h1>
+<p><a href="structure.html">Structure</a></p>
+</li>
+
+</ol>
+
+</body>
+</html>
